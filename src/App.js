@@ -9,7 +9,11 @@ function App() {
 
   const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
 
-  const start = () => console.log("hello")
+  const start = () => {
+    //console.log("hello")
+    run();
+    setInterval(run, 10)
+  }
 
   let updatedMS = time.ms
   let updatedS = time.s
@@ -25,12 +29,12 @@ function App() {
       updatedM++
       updatedS = 0
     }
-    if (updatedMs === 100) {
+    if (updatedMS === 100) {
       updatedS++
       updatedMS = 0
     }
     updatedMS++;
-    return setTime({ms:0, s:0, m:0, h:0});
+    return setTime({ms:updatedMS, s:updatedS, m:updatedM, h:updatedH});
   }
 
   return (
