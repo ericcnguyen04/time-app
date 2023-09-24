@@ -3,8 +3,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
+    <div className="main-section">
+      <div className='clock-holder'>
+         <div className='stopwatch'>
+          
+         </div>
+      </div>
     </div>
   );
 }
