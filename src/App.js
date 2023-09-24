@@ -26,7 +26,10 @@ function App() {
   }
 
   const reset = () => {
+    clearInterval(interv);
+    setStatus(0);
     setTime({ms:0, s:0, m:0, h:0});
+
   }
 
   // react logics
@@ -61,6 +64,7 @@ function App() {
             start={start}
             status = {status}
             stop = {stop}
+            reset = {reset}
           />
         </div>
       </div>
