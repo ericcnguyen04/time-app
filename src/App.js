@@ -8,11 +8,13 @@ import React, {useState} from 'react';
 function App() {
 
   const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
+  const [interv, setinterv] = useState()
+  const [status, setStatus] = useState(0)
 
   const start = () => {
     //console.log("hello")
     run();
-    setInterval(run, 10)
+    setInterv(setInterval(run, 10));
   }
 
   let updatedMS = time.ms
