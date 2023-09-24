@@ -30,7 +30,7 @@ function BtnComponent(props) {
         <div>
           <button 
             className='stopwatch-btn stopwatch-btn-gre'
-            onClick={props.stop}>
+            onClick={props.resume}>
               Resume
           </button>
           <button 

@@ -29,8 +29,9 @@ function App() {
     clearInterval(interv);
     setStatus(0);
     setTime({ms:0, s:0, m:0, h:0});
-
   }
+
+  const resume = () => start();
 
   // react logics
   let updatedMS = time.ms
@@ -65,6 +66,7 @@ function App() {
             status = {status}
             stop = {stop}
             reset = {reset}
+            resume = {resume}
           />
         </div>
       </div>
