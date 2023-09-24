@@ -1,4 +1,4 @@
-function App() {
+function DisplayComponent() {
   return (
     <div className="main-section">
       <div className='clock-holder'>
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default DisplayComponent;
