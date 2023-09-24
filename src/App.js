@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const [time, setTime] = useState(ms:0, s:0, m:0, h:0);
+  const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
 
   return (
     <div className="main-section">

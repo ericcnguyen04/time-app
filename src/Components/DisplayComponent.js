@@ -1,7 +1,7 @@
-function DisplayComponent() {
+function DisplayComponent(props) {
   return (
     <div>
-        <h1>D</h1>
+        <span>{props.time.h}</span>
     </div>
   );
 }
