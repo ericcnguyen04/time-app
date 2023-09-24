@@ -1,10 +1,11 @@
 
 import '../App.css';
 
-function BtnComponent() {
+function BtnComponent(props) {
   return (
     <div className="main-section">
-      <button className='stopwatch-btn stopwatch-btn-gre'>Start</button>
+      <button className='stopwatch-btn stopwatch-btn-gre'
+      onClick={props.start}>Start</button>
     </div>
   );
 }
