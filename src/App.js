@@ -26,7 +26,7 @@ function App() {
   }
 
   const reset = () => {
-
+    setTime({ms:0, s:0, m:0, h:0});
   }
 
   // react logics
@@ -60,6 +60,7 @@ function App() {
           <BtnComponent 
             start={start}
             status = {status}
+            stop = {stop}
           />
         </div>
       </div>
