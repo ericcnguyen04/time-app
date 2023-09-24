@@ -16,7 +16,17 @@ function App() {
   const start = () => {
     //console.log("hello")
     run();
+    setStatus(1)
     setInterv(setInterval(run, 10));
+  }
+
+  const stop = () => {
+    clearInterval(interv);
+    setStatus(2)
+  }
+
+  const reset = () => {
+
   }
 
   // react logics
