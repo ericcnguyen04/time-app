@@ -15,12 +15,12 @@ function BtnComponent(props) {
         <div>
           <button 
             className='stopwatch-btn stopwatch-btn-red'
-            onClick={props.start}>
+            onClick={props.stop}>
               Stop
           </button>
           <button 
             className='stopwatch-btn stopwatch-btn-yel'
-            onClick={props.start}>
+            onClick={props.reset}>
               Reset
           </button>
         </div> : ''

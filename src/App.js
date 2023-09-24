@@ -7,16 +7,19 @@ import React, {useState} from 'react';
 
 function App() {
 
+  // react variables
   const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
-  const [interv, setinterv] = useState()
+  const [interv, setInterv] = useState()
   const [status, setStatus] = useState(0)
 
+  // react functions
   const start = () => {
     //console.log("hello")
     run();
     setInterv(setInterval(run, 10));
   }
 
+  // react logics
   let updatedMS = time.ms
   let updatedS = time.s
   let updatedM = time.m
