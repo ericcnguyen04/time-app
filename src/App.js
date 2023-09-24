@@ -56,10 +56,13 @@ function App() {
     return setTime({ms:updatedMS, s:updatedS, m:updatedM, h:updatedH});
   }
 
+  // === !! === !! Stopwatch is up !! === !! ==
+
   return (
     <div className="main-section">
       <div className='clock-holder'>
         <div className='stopwatch'>
+          <h1> Stop watch</h1>
           <DisplayComponent time={time}/>
           <BtnComponent 
             start={start}
@@ -70,6 +73,13 @@ function App() {
           />
         </div>
       </div>
+
+      <div className='clock-holder'>
+        <div className='stopwatch'> {/* this is timer*/}
+          
+        </div>
+      </div>
+
     </div>
   );
 }
