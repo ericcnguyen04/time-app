@@ -1,7 +1,7 @@
 function DisplayComponent() {
   return (
-    <div className="main-section">
-      
+    <div>
+        <h1>D</h1>
     </div>
   );
 }
