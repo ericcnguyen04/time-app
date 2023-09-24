@@ -8,9 +8,10 @@ function App() {
   return (
     <div className="main-section">
       <div className='clock-holder'>
-         <div className='stopwatch'>
-          
-         </div>
+        <div className='stopwatch'>
+          <DisplayComponent />
+          <BtnComponent />
+        </div>
       </div>
     </div>
   );
