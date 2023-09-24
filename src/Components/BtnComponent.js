@@ -13,4 +13,4 @@ function BtnComponent() {
   );
 }
 
-export default App;
+export default BtnComponent;
