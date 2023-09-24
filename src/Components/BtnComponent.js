@@ -4,7 +4,7 @@ import '../App.css';
 function BtnComponent() {
   return (
     <div className="main-section">
-      <h1>BTN</h1>
+      <button className='stopwatch-btn stopwatch-btn-gre'>Start</button>
     </div>
   );
 }
