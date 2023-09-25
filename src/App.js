@@ -2,6 +2,7 @@ import './App.css';
 
 import DisplayComponent from './Components/DisplayComponent';
 import BtnComponent from './Components/BtnComponent';
+import TimerDisplay from './Components/TimerDisplay';
 
 import React, {useState} from 'react';
 
