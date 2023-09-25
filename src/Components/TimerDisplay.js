@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 export default function TimerDisplay (props) {
 
@@ -9,10 +9,16 @@ export default function TimerDisplay (props) {
     useEffect(() => {
 
         timer = setInterval(() => {
+            setSeconds(seconds + 1);
 
-            setSeconds(seconds + 1)
+            if (seconds === 59) {
+                setMinutes(minutes + 1);
+                setSeconds(0)
+            }
         })
     })
+
+    return () => clearInterval(timer)
 
     return (
         <div>
