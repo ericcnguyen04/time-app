@@ -78,6 +78,8 @@ function App() {
   // return () => clearInterval(timer)
 
   return (
+    // change all of app and make home page, each stopwatch and timer should have its own page
+
     <div className="main-section">
       <div className='clock-holder'>
         <div className='stopwatch'>
