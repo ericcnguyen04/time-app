@@ -3,6 +3,16 @@ import React, {useState} from 'react'
 export default function TimerDisplay (props) {
 
     const [seconds, setSeconds] = useState(0)
+    const [minutes, setMinutes] = useState(0)
+
+    let timer;
+    useEffect(() => {
+
+        timer = setInterval(() => {
+
+            setSeconds(seconds + 1)
+        })
+    })
 
     return (
         <div>
