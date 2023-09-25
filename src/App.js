@@ -97,7 +97,8 @@ function App() {
         <div className='stopwatch'> {/* this is timer*/}
         <h1>Timer</h1>
           <TimerDisplay 
-            time={time}
+            minutes={minutes}
+            seconds={seconds}
           />
         </div>
       </div>
