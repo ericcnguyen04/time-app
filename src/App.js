@@ -77,7 +77,7 @@ function App() {
 
       <div className='clock-holder'>
         <div className='stopwatch'> {/* this is timer*/}
-          
+          <TimerDisplay />
         </div>
       </div>
 
