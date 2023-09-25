@@ -4,7 +4,7 @@ import DisplayComponent from './Components/DisplayComponent';
 import BtnComponent from './Components/BtnComponent';
 import TimerDisplay from './Components/TimerDisplay';
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function App() {
 
@@ -59,6 +59,24 @@ function App() {
 
   // === !! === !! Stopwatch is up !! === !! ==
 
+  const [seconds, setSeconds] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+
+  let timer;
+  useEffect(() => {
+
+      timer = setInterval(() => {
+          setSeconds(seconds + 1);
+
+          if (seconds === 59) {
+              setMinutes(minutes + 1);
+              setSeconds(0)
+          }
+      }, 1000)
+  })
+
+  // return () => clearInterval(timer)
+
   return (
     <div className="main-section">
       <div className='clock-holder'>
@@ -78,7 +96,9 @@ function App() {
       <div className='clock-holder'>
         <div className='stopwatch'> {/* this is timer*/}
         <h1>Timer</h1>
-          <TimerDisplay time={time}/>
+          <TimerDisplay 
+            time={time}
+          />
         </div>
       </div>
 
