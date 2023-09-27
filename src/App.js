@@ -1,81 +1,81 @@
 import './App.css';
 
 import DisplayComponent from './Components/DisplayComponent';
-import BtnComponent from './Components/BtnComponent';
+// import BtnComponent from './Components/BtnComponent';
 import TimerDisplay from './Components/TimerDisplay';
 import Home from './Components/Home';
 
-import React, {useState, useEffect} from 'react';
+// import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-  // react variables
-  const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
-  const [interv, setInterv] = useState()
-  const [status, setStatus] = useState(0)
+  // // react variables
+  // const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
+  // const [interv, setInterv] = useState()
+  // const [status, setStatus] = useState(0)
 
-  // react functions
-  const start = () => {
-    //console.log("hello")
-    run();
-    setStatus(1)
-    setInterv(setInterval(run, 10));
-  }
+  // // react functions
+  // const start = () => {
+  //   //console.log("hello")
+  //   run();
+  //   setStatus(1)
+  //   setInterv(setInterval(run, 10));
+  // }
 
-  const stop = () => {
-    clearInterval(interv);
-    setStatus(2)
-  }
+  // const stop = () => {
+  //   clearInterval(interv);
+  //   setStatus(2)
+  // }
 
-  const reset = () => {
-    clearInterval(interv);
-    setStatus(0);
-    setTime({ms:0, s:0, m:0, h:0});
-  }
+  // const reset = () => {
+  //   clearInterval(interv);
+  //   setStatus(0);
+  //   setTime({ms:0, s:0, m:0, h:0});
+  // }
 
-  const resume = () => start();
+  // const resume = () => start();
 
-  // react logics
-  let updatedMS = time.ms
-  let updatedS = time.s
-  let updatedM = time.m
-  let updatedH = time.h
+  // // react logics
+  // let updatedMS = time.ms
+  // let updatedS = time.s
+  // let updatedM = time.m
+  // let updatedH = time.h
 
-  const run = () => {
-    if (updatedM === 60) {
-      updatedH++
-      updatedM = 0
-    }
-    if (updatedS === 60) {
-      updatedM++
-      updatedS = 0
-    }
-    if (updatedMS === 100) {
-      updatedS++
-      updatedMS = 0
-    }
-    updatedMS++;
-    return setTime({ms:updatedMS, s:updatedS, m:updatedM, h:updatedH});
-  }
+  // const run = () => {
+  //   if (updatedM === 60) {
+  //     updatedH++
+  //     updatedM = 0
+  //   }
+  //   if (updatedS === 60) {
+  //     updatedM++
+  //     updatedS = 0
+  //   }
+  //   if (updatedMS === 100) {
+  //     updatedS++
+  //     updatedMS = 0
+  //   }
+  //   updatedMS++;
+  //   return setTime({ms:updatedMS, s:updatedS, m:updatedM, h:updatedH});
+  // }
 
   // === !! === !! Stopwatch is up !! === !! ==
 
-  const [seconds, setSeconds] = useState(0)
-  const [minutes, setMinutes] = useState(0)
+  // const [seconds, setSeconds] = useState(0)
+  // const [minutes, setMinutes] = useState(0)
 
-  let timer;
-  useEffect(() => {
+  // let timer;
+  // useEffect(() => {
 
-      timer = setInterval(() => {
-          setSeconds(seconds + 1);
+  //     timer = setInterval(() => {
+  //         setSeconds(seconds + 1);
 
-          if (seconds === 59) {
-              setMinutes(minutes + 1);
-              setSeconds(0)
-          }
-      }, 1000)
-  })
+  //         if (seconds === 59) {
+  //             setMinutes(minutes + 1);
+  //             setSeconds(0)
+  //         }
+  //     }, 1000)
+  // })
 
   // return () => clearInterval(timer)
 
@@ -84,10 +84,9 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="/stopwatch" element={<DisplayComponent />} />
-          <Route path="/timer" element={<TimerDisplay />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/stopwatch" element={<DisplayComponent />} />
+        <Route path="/timer" element={<TimerDisplay />} />
       </Routes>
     </BrowserRouter>
 
