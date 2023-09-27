@@ -24,6 +24,7 @@ export default function TimerDisplay (props) {
                     <h1>Timer</h1>
                         <span>{minutes < 10 ? "0" + minutes : minutes}</span> &nbsp;:&nbsp;
                         <span>{seconds < 10 ? "0" + seconds : seconds}</span> &nbsp;
+                        
                 </div>
             </div>
         </div>
