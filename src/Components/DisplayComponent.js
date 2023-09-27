@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+import BtnComponent from "./BtnComponent";
 
 function DisplayComponent() {
     
