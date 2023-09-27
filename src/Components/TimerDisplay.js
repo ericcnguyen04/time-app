@@ -21,9 +21,9 @@ export default function TimerDisplay (props) {
         <div className="main-section">
             <div className='clock-holder'>
                 <div className='stopwatch'>
-                    <h1> Stop watch</h1>
-                        <span>{minutes}</span> &nbsp;:&nbsp;
-                        <span>{seconds}</span>
+                    <h1>Timer</h1>
+                        <span>{minutes < 10 ? "0" + minutes : minutes}</span> &nbsp;:&nbsp;
+                        <span>{seconds < 10 ? "0" + seconds : seconds}</span> &nbsp;:&nbsp;
                 </div>
             </div>
         </div>
