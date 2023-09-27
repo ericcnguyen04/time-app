@@ -6,7 +6,13 @@ function TimerButtons(props) {
     <div>
         <button 
             className='stopwatch-btn stopwatch-btn-yel'
-            onClick={props.start}> Restart
+            onClick={props.restart}> Restart
+        </button>
+
+        <button 
+            className='stopwatch-btn stopwatch-btn-red'
+            onClick={props.stop}>
+              Stop
         </button>
 
       {(props.status === 1) ?

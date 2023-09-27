@@ -7,7 +7,8 @@ export default function TimerDisplay (props) {
     const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(0)
 
-    let timer;
+    let timerId
+
     useEffect(() => {
         timer = setInterval(() => {
             setSeconds(seconds + 1);
@@ -19,6 +20,11 @@ export default function TimerDisplay (props) {
         }, 1000)
     })
 
+    const restart = () => {
+        setSeconds(0)
+        setMinutes(0)
+    }
+
     return (
         <div className="main-section">
             <div className='clock-holder'>
@@ -27,7 +33,9 @@ export default function TimerDisplay (props) {
                         <span>{minutes < 10 ? "0" + minutes : minutes}</span> &nbsp;:&nbsp;
                         <span>{seconds < 10 ? "0" + seconds : seconds}</span> &nbsp;
                     
-                        <TimerButtons />
+                        <TimerButtons 
+                            restart = {restart}
+                        />
                 </div>
             </div>
         </div>
