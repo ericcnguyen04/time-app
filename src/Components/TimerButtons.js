@@ -1,15 +1,13 @@
 
 import '../App.css';
 
-function BtnComponent(props) {
+function TimerButtons(props) {
   return (
     <div>
-      {(props.status === 0) ?
         <button 
-        className='stopwatch-btn stopwatch-btn-gre'
-        onClick={props.start}>Start
-        </button> : ""
-      }
+            className='stopwatch-btn stopwatch-btn-yel'
+            onClick={props.start}> Restart
+        </button>
 
       {(props.status === 1) ?
         <div>
@@ -45,4 +43,4 @@ function BtnComponent(props) {
   );
 }
 
-export default BtnComponent;
+export default TimerButtons;
