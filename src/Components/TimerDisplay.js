@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
+import TimerButtons from './TimerButtons'
+
 export default function TimerDisplay (props) {
 
     const [seconds, setSeconds] = useState(0)
