@@ -85,8 +85,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route path="stopwatch" element={<DisplayComponent />} />
-          <Route path="timer" element={<TimerDisplay />} />
+          <Route path="/stopwatch" element={<DisplayComponent />} />
+          <Route path="/timer" element={<TimerDisplay />} />
         </Route>
       </Routes>
     </BrowserRouter>
