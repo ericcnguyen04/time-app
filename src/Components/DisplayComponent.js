@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 
-function DisplayComponent() {
 
-    // react variables
+function DisplayComponent() {
+    
+  // react variables
   const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
   const [interv, setInterv] = useState()
   const [status, setStatus] = useState(0)
@@ -53,10 +54,26 @@ function DisplayComponent() {
 
   return (
     <div>
+      <div className="main-section">
+       <div className='clock-holder'>
+         <div className='stopwatch'>
+           <h1> Stop watch</h1>
+           <DisplayComponent time={time}/>
+           <BtnComponent 
+             start={start}
+             status = {status}
+             stop = {stop}
+             reset = {reset}
+             resume = {resume}
+           />
+         </div>
+       </div>
+
         <span>{(time.h >= 10) ? time.h : "0" + time.h}</span>&nbsp;:&nbsp;
         <span>{(time.m >= 10) ? time.m : "0" + time.m}</span>&nbsp;:&nbsp;
         <span>{(time.s >= 10) ? time.s : "0" + time.s}</span>&nbsp;:&nbsp;
         <span>{(time.ms >= 10) ? time.ms : "0" + time.ms}</span>&nbsp;&nbsp;
+      </div>
     </div>
   );
 }
