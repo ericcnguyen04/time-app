@@ -4,19 +4,18 @@ import '../App.css';
 function TimerButtons(props) {
   return (
     <div>
-      {(props.status === 1) ?
+      {(props.status === 0) ?
         <div>
           <button 
               className='stopwatch-btn stopwatch-btn-yel'
               onClick={props.restart}> Restart
           </button>
-
           <button 
               className='stopwatch-btn stopwatch-btn-red'
               onClick={props.stop}>
                 Stop
-          </button> : '' 
-        </div>
+          </button> 
+        </div> : ''
       }
 
       {(props.status === 1) ?
