@@ -43,13 +43,17 @@ export default function TimerDisplay (props) {
     }
 
     const run = () => {
+        // if (hours === 0) {
+        //   hours--
+        //   minutes = 0
+        // }
         if (minutes === 0) {
           hours--
-          minutes = 0
+        //   minutes = 0
         }
         if (seconds === 0) {
           minutes--
-          seconds = 0
+        //   seconds = 0
         }
         return setTime({s:seconds, m:minutes, h:hours});
       }
