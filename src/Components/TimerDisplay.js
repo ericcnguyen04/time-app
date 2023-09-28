@@ -6,8 +6,6 @@ export default function TimerDisplay (props) {
 
     // react variables
     const [seconds, setSeconds] = useState(0)
-    const [minutes, setMinutes] = useState(0)
-    const [hours, setHours] = useState(0)
 
     // let timer;
 
@@ -28,6 +26,10 @@ export default function TimerDisplay (props) {
     const start = () => {
         run();
         setInterval(setInterval(run, 10))
+    }
+
+    const stop = () => {
+        clearInterval(interv)
     }
 
     const restart = () => {
