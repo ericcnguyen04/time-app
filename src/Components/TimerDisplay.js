@@ -69,6 +69,8 @@ export default function TimerDisplay (props) {
                     
                         <TimerButtons 
                             restart = {restart}
+                            start = {start}
+                            stop = {stop}
                         />
                 </div>
             </div>
