@@ -68,9 +68,9 @@ export default function TimerDisplay (props) {
             <div className='clock-holder'>
                 <div className='stopwatch'>
                     <h1>Timer</h1>
-                        <span>{hours < 10 ? "0" + hours : hours}</span> &nbsp;:&nbsp;
-                        <span>{minutes < 10 ? "0" + minutes : minutes}</span> &nbsp;:&nbsp;
-                        <span>{seconds < 10 ? "0" + seconds : seconds}</span> &nbsp;
+                        <span>{timer.h < 10 ? "0" + timer.h : timer.h}</span> &nbsp;:&nbsp;
+                        <span>{timer.m < 10 ? "0" + timer.m : timer.m}</span> &nbsp;:&nbsp;
+                        <span>{timer.s < 10 ? "0" + timer.s : timer.s}</span> &nbsp;
                     
                         <TimerButtons 
                             restart = {restart}
