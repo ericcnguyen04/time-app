@@ -55,7 +55,7 @@ export default function TimerDisplay (props) {
           timer.m--
         //   seconds = 0
         }
-        return setTime({s:seconds, m:minutes, h:hours});
+        return setTimer({s:seconds, m:minutes, h:hours});
       }
 
     return (
