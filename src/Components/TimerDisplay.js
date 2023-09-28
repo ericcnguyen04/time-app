@@ -5,7 +5,9 @@ import TimerButtons from './TimerButtons'
 export default function TimerDisplay (props) {
 
     // react variables
-    const [seconds, setSeconds] = useState(0)
+    const [timer, setTimer] = useState({s:0, m:0, h:0})
+    const [interv, setInterv] = useState()
+    const [status, setStatus] = useState(0)
 
     // let timer;
 
@@ -25,16 +27,19 @@ export default function TimerDisplay (props) {
 
     const start = () => {
         run();
-        setInterval(setInterval(run, 10))
+        setStatus(1)
+        setInterv(setInterval(run, 10))
     }
 
     const stop = () => {
         clearInterval(interv)
+        setStatus(2)
     }
 
     const restart = () => {
-        setSeconds(0)
-        setMinutes(0)
+        clearInterval(interv)
+        setStatus(0)
+        setTimer({s:0, m:0, h:0})
     }
 
     const run = () => {
