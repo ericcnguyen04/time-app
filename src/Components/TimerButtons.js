@@ -8,7 +8,7 @@ function TimerButtons(props) {
         <div>
           <button 
               className='stopwatch-btn stopwatch-btn-gre'
-              onClick={props.restart}> Start
+              onClick={props.start}> Start
           </button>
           <button 
               className='stopwatch-btn stopwatch-btn-red'
