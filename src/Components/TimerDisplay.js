@@ -6,8 +6,9 @@ export default function TimerDisplay (props) {
 
     const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(0)
+    const [hours, setHours] = useState(0)
 
-    let timerId
+    let timer;
 
     useEffect(() => {
         timer = setInterval(() => {
@@ -25,11 +26,24 @@ export default function TimerDisplay (props) {
         setMinutes(0)
     }
 
+    const run = () => {
+        if (updatedM === 60) {
+          updatedH++
+          updatedM = 0
+        }
+        if (updatedS === 60) {
+          updatedM++
+          updatedS = 0
+        }
+        return setTime({s:updatedS, m:updatedM, h:updatedH});
+      }
+
     return (
         <div className="main-section">
             <div className='clock-holder'>
                 <div className='stopwatch'>
                     <h1>Timer</h1>
+                        <span>{hours < 10 ? "0" + hours : hours}</span> &nbsp;:&nbsp;
                         <span>{minutes < 10 ? "0" + minutes : minutes}</span> &nbsp;:&nbsp;
                         <span>{seconds < 10 ? "0" + seconds : seconds}</span> &nbsp;
                     
