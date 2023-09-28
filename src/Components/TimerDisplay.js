@@ -5,7 +5,7 @@ import TimerButtons from './TimerButtons'
 export default function TimerDisplay (props) {
 
     // react variables
-    const [timer, setTimer] = useState({s:0, m:0, h:0})
+    const [timer, setTimer] = useState({s:45, m:0, h:1})
     const [interv, setInterv] = useState()
     const [status, setStatus] = useState(0)
 
@@ -54,10 +54,12 @@ export default function TimerDisplay (props) {
         // }
         if (timer.m === 0) {
           timer.h--
+          timer.m = 59
         //   minutes = 0
         }
         if (timer.s === 0) {
           timer.m--
+          timer.s = 59
         //   seconds = 0
         }
         return setTimer({s:updatedS, m:updatedM, h:updatedH});
