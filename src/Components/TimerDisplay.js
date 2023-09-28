@@ -47,12 +47,12 @@ export default function TimerDisplay (props) {
         //   hours--
         //   minutes = 0
         // }
-        if (minutes === 0) {
-          hours--
+        if (timer.m === 0) {
+          timer.h--
         //   minutes = 0
         }
-        if (seconds === 0) {
-          minutes--
+        if (timer.s === 0) {
+          timer.m--
         //   seconds = 0
         }
         return setTime({s:seconds, m:minutes, h:hours});
