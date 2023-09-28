@@ -4,22 +4,31 @@ import TimerButtons from './TimerButtons'
 
 export default function TimerDisplay (props) {
 
+    // react variables
     const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(0)
     const [hours, setHours] = useState(0)
 
-    let timer;
+    // let timer;
 
-    useEffect(() => {
-        timer = setInterval(() => {
-            setSeconds(seconds + 1);
 
-            if (seconds === 59) {
-                setMinutes(minutes + 1);
-                setSeconds(0)
-            }
-        }, 1000)
-    })
+    // useEffect(() => {
+    //     timer = setInterval(() => {
+    //         setSeconds(seconds + 1);
+
+    //         if (seconds === 59) {
+    //             setMinutes(minutes + 1);
+    //             setSeconds(0)
+    //         }
+    //     }, 1000)
+    // })
+
+    // react functions
+
+    const start = () => {
+        run();
+        setInterval(setInterval(run, 10))
+    }
 
     const restart = () => {
         setSeconds(0)
@@ -27,15 +36,15 @@ export default function TimerDisplay (props) {
     }
 
     const run = () => {
-        if (updatedM === 60) {
-          updatedH++
-          updatedM = 0
+        if (minutes === 0) {
+          hours--
+          minutes = 0
         }
-        if (updatedS === 60) {
-          updatedM++
-          updatedS = 0
+        if (seconds === 0) {
+          minutes--
+          seconds = 0
         }
-        return setTime({s:updatedS, m:updatedM, h:updatedH});
+        return setTime({s:seconds, m:minutes, h:hours});
       }
 
     return (
