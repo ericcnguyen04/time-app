@@ -42,6 +42,11 @@ export default function TimerDisplay (props) {
         setTimer({s:0, m:0, h:0})
     }
 
+     // react logics
+    let updatedS = timer.s
+    let updatedM = timer.m
+    let updatedH = timer.h
+
     const run = () => {
         // if (hours === 0) {
         //   hours--
