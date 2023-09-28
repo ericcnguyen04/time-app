@@ -10,25 +10,25 @@ function TimerButtons(props) {
               className='stopwatch-btn stopwatch-btn-gre'
               onClick={props.start}> Start
           </button>
-          <button 
+          {/* <button 
               className='stopwatch-btn stopwatch-btn-red'
               onClick={props.stop}>
                 Cancel
-          </button> 
+          </button>  */}
         </div> : ''
       }
 
       {(props.status === 1) ?
         <div>
           <button 
-            className='stopwatch-btn stopwatch-btn-red'
+            className='stopwatch-btn stopwatch-btn-yel'
             onClick={props.stop}>
-              Stop
+              Pause
           </button>
           <button 
-            className='stopwatch-btn stopwatch-btn-yel'
+            className='stopwatch-btn stopwatch-btn-red'
             onClick={props.reset}>
-              Reset
+              Cancel
           </button>
         </div> : ''
       }
@@ -41,9 +41,9 @@ function TimerButtons(props) {
               Resume
           </button>
           <button 
-            className='stopwatch-btn stopwatch-btn-yel'
+            className='stopwatch-btn stopwatch-btn-red'
             onClick={props.reset}>
-              Reset
+              Cancel
           </button>
         </div> : ''
       }
