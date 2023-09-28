@@ -76,6 +76,7 @@ export default function TimerDisplay (props) {
                             restart = {restart}
                             start = {start}
                             stop = {stop}
+                            status = {status}
                         />
                 </div>
             </div>
