@@ -42,7 +42,7 @@ export default function TimerDisplay (props) {
         setTimer({s:0, m:0, h:0})
     }
 
-     // react logics
+     // react logics undone
     let updatedS = timer.s
     let updatedM = timer.m
     let updatedH = timer.h
